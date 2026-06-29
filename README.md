@@ -1,0 +1,1 @@
+a web scraper that tracks down plot trends overtime and represents them through a dashboard. (this project specifically tracks sentiments/observations associated with recent upcoming news headlines)
