@@ -22,3 +22,38 @@ canvas {
   padding: 16px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+td a {
+  color: #222;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.positive { color: #2ca02c; font-weight: 600; }
+.negative { color: #d62728; font-weight: 600; }
+.neutral { color: #888; }

@@ -2,6 +2,7 @@ fetch("data.json")
   .then(res => res.json())
   .then(data => {
     renderChart(data);
+    renderTable(data);
   });
 
 function renderChart(data) {
@@ -51,5 +52,30 @@ function renderChart(data) {
         }
       }
     }
+  });
+}
+
+function renderTable(data) {
+  // sort by most recent first, take top 30
+  const sorted = [...data].sort((a, b) => new Date(b.scraped_at) - new Date(a.scraped_at));
+  const recent = sorted.slice(0, 30);
+
+  const tbody = document.getElementById("headlineTableBody");
+  tbody.innerHTML = "";
+
+  recent.forEach(row => {
+    const tr = document.createElement("tr");
+
+    const sentimentClass = row.sentiment > 0.05 ? "positive"
+                          : row.sentiment < -0.05 ? "negative"
+                          : "neutral";
+
+    tr.innerHTML = `
+      <td>${row.source}</td>
+      <td><a href="${row.link}" target="_blank">${row.headline}</a></td>
+      <td class="${sentimentClass}">${row.sentiment.toFixed(2)}</td>
+      <td>${new Date(row.scraped_at).toLocaleString()}</td>
+    `;
+    tbody.appendChild(tr);
   });
 }
