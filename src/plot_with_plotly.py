@@ -31,7 +31,7 @@ def generate_plotly_chart():
     )
 
     fig.update_yaxes(range=[-1, 1])
-    fig.write_html(OUTPUT_PATH)
+    fig.write_html(OUTPUT_PATH, include_plotlyjs="cdn")
     print(f"Plotly chart saved to {OUTPUT_PATH}")
 
 
