@@ -1,0 +1,24 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin-bottom: 4px;
+}
+
+p {
+  color: #666;
+  margin-top: 0;
+}
+
+canvas {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
