@@ -1,0 +1,5 @@
+# Mark auto-generated files so GitHub's language stats reflect
+# hand-authored code, not generated output
+
+site/plotly_chart.html linguist-generated=true
+site/data.json linguist-generated=true
